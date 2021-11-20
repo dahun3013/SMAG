@@ -4,8 +4,11 @@ AI arithmetic study game
 
 
 ## 환경 설정
-git push permission 을 위한 설정 <br>
-https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password <br>
+git clone 후 .git\config 설정에 다음을 추가
+```
+[credential]
+	helper = store
+```
 
 
 
