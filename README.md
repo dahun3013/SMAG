@@ -4,12 +4,13 @@ AI arithmetic study game
 
 
 ## 환경 설정
-git clone 후 .git\config 설정에 다음을 추가
+git clone 후 (1)을 입력하거나 (2)번을 .git\config 설정에 추가
 ```
-[credential]
+(1) git config credential.helper store
+
+(2) [credential]
 	helper = store
 ```
-
 
 
 ## 기획서
