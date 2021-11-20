@@ -1,5 +1,6 @@
 # SMAG
 AI arithmetic study game
+(Game Engine : Unity)
 
 
 ## 기획서
