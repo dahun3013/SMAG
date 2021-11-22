@@ -4,12 +4,10 @@ AI arithmetic study game
 
 
 ## 환경 설정
-git clone 후 (1)을 입력하거나 (2)를 .git\config 설정에 직접 추가
+(1) 원격 저장소 push 권한 <br>
+git clone 후 아래를 입력
 ```
-(1) git config credential.helper store
-
-(2) [credential]
-	helper = store
+> git config credential.helper store
 ```
 
 
