@@ -15,6 +15,7 @@ git clone 후 아래를 입력
 https://www.notion.so/AI-Arithmetic-Study-Game-Project-878fcf59d3134062bffe50e46dfc75d9
 
 
+
 ## 개발코드 깃 형상 관리
 - 모든 Merge 는 각 Branch 스텝에 맞게 진행하며, PR 요청 후 모든 팀원이 OK 하고, PR 요청자가 Merge 완료 처리.
 
