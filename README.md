@@ -17,7 +17,11 @@ https://www.notion.so/AI-Arithmetic-Study-Game-Project-878fcf59d3134062bffe50e46
 
 
 ## 개발코드 깃 형상 관리
-- 모든 Merge 는 각 Branch 스텝에 맞게 진행하며, PR 요청 후 모든 팀원이 OK 하고, PR 요청자가 Merge 완료 처리.
+master branch : pull request 후 merge 로 진행한다. <br>
+develop branch : TBD <br>
+(이 외에 필요하다면, 별도의 브랜치를 생성하여 개발에 활용) <br>
+
+
 
 Master : 배포되어서 사용자가 사용할 수 있는 버전의 가장 최신 버전 (개발완료 상태)
 - Merge : develop -> Master (개발 배포 직후)
