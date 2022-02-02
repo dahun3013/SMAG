@@ -91,12 +91,12 @@ public class RankView : MonoBehaviour
                             difficultyName = "상";
                             break;
                     }
-                    newUi.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = trackName;
+                    newUi.transform.GetChild(0).GetComponent<Text>().text = trackName;
                     newUi.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = data.idx + "";
                     newUi.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = data.type + "";
                     newUi.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = data.difficulty + "";
                     newUi.transform.GetChild(4).GetComponent<Image>().sprite = difficultyImgList[data.difficulty - 1];
-                    newUi.transform.GetChild(4).GetChild(0).GetComponent<TextMeshProUGUI>().text = difficultyName;
+                    newUi.transform.GetChild(4).GetChild(0).GetComponent<Text>().text = difficultyName;
                     newUi.transform.GetChild(5).GetComponent<Button>().onClick.AddListener(delegate()
                     {
                         selectRank(newUi);
@@ -105,10 +105,10 @@ public class RankView : MonoBehaviour
                     int count = 0;
                     foreach (rankUser user in data.rankUserList)
                     {
-                        newUi.transform.GetChild(6).GetChild(count).GetChild(0).GetComponent<TextMeshProUGUI>().text = (count + 1) + "위";
+                        newUi.transform.GetChild(6).GetChild(count).GetChild(0).GetComponent<Text>().text = (count + 1) + "위";
                         int ran = Random.Range(0,profileImgList.Length);
                         newUi.transform.GetChild(6).GetChild(count).GetChild(1).GetComponent<Image>().sprite = profileImgList[ran];
-                        newUi.transform.GetChild(6).GetChild(count).GetChild(2).GetComponent<TextMeshProUGUI>().text = user.nickName;
+                        newUi.transform.GetChild(6).GetChild(count).GetChild(2).GetComponent<Text>().text = user.nickName;
                         count++;
                         if (count >= 3)
                             break;
@@ -121,12 +121,12 @@ public class RankView : MonoBehaviour
 
     public void selectRank(RectTransform g)
     { 
-        trackInfo.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = g.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text;//name
+        trackInfo.transform.GetChild(0).GetComponent<Text>().text = g.transform.GetChild(0).GetComponent<Text>().text;//name
         trackInfo.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = g.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text;//idx
         trackInfo.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = g.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text;//type
         trackInfo.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = g.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text;//difficulty
         trackInfo.transform.GetChild(4).GetComponent<Image>().sprite = g.transform.GetChild(4).GetComponent<Image>().sprite;//image
-        trackInfo.transform.GetChild(4).GetChild(0).GetComponent<TextMeshProUGUI>().text = g.transform.GetChild(4).GetChild(0).GetComponent<TextMeshProUGUI>().text; //imageName
+        trackInfo.transform.GetChild(4).GetChild(0).GetComponent<Text>().text = g.transform.GetChild(4).GetChild(0).GetComponent<Text>().text; //imageName
         
         
         nextCanvas.SetActive(true);

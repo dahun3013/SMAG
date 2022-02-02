@@ -100,12 +100,12 @@ public class TrackView : MonoBehaviour
                             break;
                     }
 
-                    newUi.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = trackName;
+                    newUi.transform.GetChild(0).GetComponent<Text>().text = trackName;
                     newUi.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = data.idx + "";
                     newUi.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = data.type + "";
                     newUi.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = data.difficulty + "";
                     newUi.transform.GetChild(4).GetComponent<Image>().sprite = difficultyImgList[data.difficulty - 1];
-                    newUi.transform.GetChild(4).GetChild(0).GetComponent<TextMeshProUGUI>().text = difficultyName;
+                    newUi.transform.GetChild(4).GetChild(0).GetComponent<Text>().text = difficultyName;
                     newUi.transform.GetChild(5).GetComponent<Button>().onClick.AddListener(delegate()
                     {
                         OnClick(newUi);

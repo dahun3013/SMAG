@@ -29,7 +29,6 @@
 -s="C:\Users\jdh3385\MyGitRepository\SMAG\SMA GAME_nestler\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Portable"
 -s="C:\Users\jdh3385\MyGitRepository\SMAG\SMA GAME_nestler\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime"
 -s="C:\Users\jdh3385\MyGitRepository\SMAG\SMA GAME_nestler\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom"
--s="C:\Users\jdh3385\MyGitRepository\SMAG\SMA GAME_nestler\Assets\JsonDotNet\Assemblies\Windows"
 -s="C:\Users\jdh3385\MyGitRepository\SMAG\SMA GAME_nestler\Assets"
 -s="D:\2020.3.24f1\Editor\Data\Managed\UnityEngine"
 -s="D:\2020.3.24f1\Editor\Data\NetStandard\ref\2.0.0"

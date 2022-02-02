@@ -59,7 +59,7 @@ public class LoginView : MonoBehaviour
                     newUi.transform.GetChild(0).GetComponent<Image>().sprite = profileImgList[(count++) % (profileImgList.Length)];
                     newUi.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = data.idx + "";
                     newUi.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = data.id + "";
-                    newUi.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = data.nickName;
+                    newUi.transform.GetChild(3).GetComponent<Text>().text = data.nickName;
                     newUi.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = data.age + "";
                     newUi.transform.GetChild(5).GetComponent<TextMeshProUGUI>().text = data.gender;
                     newUi.transform.GetChild(6).GetComponent<Button>().onClick.AddListener(delegate()
@@ -77,7 +77,7 @@ public class LoginView : MonoBehaviour
         userInfo.transform.GetChild(0).GetComponent<Image>().sprite = rectTransform.transform.GetChild(0).GetComponent<Image>().sprite;
         userInfo.transform.GetChild(1).GetComponent<Text>().text = rectTransform.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text;
         userInfo.transform.GetChild(2).GetComponent<Text>().text = rectTransform.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text;
-        userInfo.transform.GetChild(3).GetComponent<Text>().text = rectTransform.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text;
+        userInfo.transform.GetChild(3).GetComponent<Text>().text = rectTransform.transform.GetChild(3).GetComponent<Text>().text;
         userInfo.transform.GetChild(4).GetComponent<Text>().text = rectTransform.transform.GetChild(4).GetComponent<TextMeshProUGUI>().text;
         userInfo.transform.GetChild(5).GetComponent<Text>().text = rectTransform.transform.GetChild(5).GetComponent<TextMeshProUGUI>().text;
         nextCanvas.SetActive(true);

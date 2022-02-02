@@ -9,6 +9,7 @@ public class Note : MonoBehaviour
     public bool isEnable = false;
     public string expression = "";
     public short[] answers;
+    public short idx;
 
 
 
@@ -42,6 +43,7 @@ public class Note : MonoBehaviour
         transform.GetChild(2).GetComponent<TextMesh>().text = answers[1].ToString();
         transform.GetChild(3).GetComponent<TextMesh>().text = answers[2].ToString();
         transform.GetChild(4).GetComponent<TextMesh>().text = answers[3].ToString();
+        transform.GetChild(5).GetComponent<TextMesh>().text = idx.ToString();
     }
 
     void OnBecameVisible()

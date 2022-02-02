@@ -86,6 +86,7 @@ public class Lane : MonoBehaviour
                 note.GetComponent<Note>().assignedTime = (float)timeStamps[spawnIndex];
                 note.GetComponent<Note>().expression = questionList.resultData[spawnIndex].question;
                 note.GetComponent<Note>().answers = questionList.resultData[spawnIndex].answerList;
+				note.GetComponent<Note>().idx = questionList.resultData[spawnIndex].idx;
                 ++spawnIndex;
             }
         }
@@ -135,7 +136,7 @@ public class Lane : MonoBehaviour
                     case TouchPhase.Began:
                         Debug.Log(Input.GetTouch(0).position);
                         //여기에 버튼의 안쪽을 클릭했으면, 해당 버튼의 인덱스 가져와서 비교
-
+						
                         break;
                 }
             }
@@ -199,11 +200,27 @@ public class Lane : MonoBehaviour
     private void Hit()
     {
         ScoreManager.Hit();
+		string key = notes[questionIndex].GetComponent<Note>().idx.ToString();
+		int value;
+		value = 1;	
+		if(qinfo.questionMap.ContainsKey(key)){
+			value = qinfo.questionMap[key] + 1;
+		}
+		qinfo.questionMap.Add(key, value);
+		Debug.Log("key : "+key+", value : "+value);
     }
 
     private void Miss()
     {
         ScoreManager.Miss();
+		string key = notes[questionIndex].GetComponent<Note>().idx.ToString();
+		int value;
+		value = -1;	
+		if(qinfo.questionMap.ContainsKey(key)){
+			value = qinfo.questionMap[key] - 1;
+		}
+		qinfo.questionMap.Add(key, value);
+		Debug.Log("key : "+key+", value : "+value);
         GameOver((int)SongManager.GetAudioSourceTime(), inputIndex, false);
     }
 
@@ -211,8 +228,6 @@ public class Lane : MonoBehaviour
     {
         qinfo.trackIdx = int.Parse(trackInfo.transform.GetChild(1).GetComponent<Text>().text);
         qinfo.userIdx = int.Parse(userInfo.transform.GetChild(1).GetComponent<Text>().text);
-        qinfo.questionMap.Add(1, 1);
-        qinfo.questionMap.Add(14, 12);
         
         int type = Int32.Parse(trackInfo.transform.GetChild(1).GetComponent<Text>().text);
         string trackName = "";
@@ -252,7 +267,7 @@ public class Lane : MonoBehaviour
         resultInfo.collectCount = collectCount;
         resultInfo.isClear = isClear;
         string json = JsonConvert.SerializeObject(qinfo);
-        //Debug.Log(json);
+        Debug.Log(json);
         gameManager.GetComponent<GameManager>().GetQuestionResult(json, resultInfo);
         gameObject.SetActive(false);
     }

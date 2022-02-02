@@ -6,10 +6,10 @@ public class QuestionInfo
 {
     public int trackIdx { get; set; }
     public int userIdx { get; set; }
-    public Dictionary<int,int> questionMap { get; set; }
+    public Dictionary<string,int> questionMap { get; set; }
 
     public QuestionInfo()
     {
-        questionMap = new Dictionary<int, int>();
+        questionMap = new Dictionary<string, int>();
     }
 }

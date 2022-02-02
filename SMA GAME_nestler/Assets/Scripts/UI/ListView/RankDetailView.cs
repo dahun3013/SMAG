@@ -67,9 +67,9 @@ public class RankDetailView : MonoBehaviour
                         uiPrefab = uiPrefabTop;
                     }
                     var newUi = Instantiate(uiPrefab, scrollRect.content).GetComponent<RectTransform>();
-                    newUi.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = count + "위";
+                    newUi.transform.GetChild(0).GetComponent<Text>().text = count + "위";
                     newUi.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = user.idx + "";
-                    newUi.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = user.nickName;
+                    newUi.transform.GetChild(2).GetComponent<Text>().text = user.nickName;
                     newUi.transform.GetChild(3).GetComponent<Image>().sprite = userInfo.transform.GetChild(0).GetComponent<Image>().sprite;
                     uiObjects.Add(newUi);
                     count++;
