@@ -11,13 +11,12 @@ public class GameSettings : MonoBehaviour
     {
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         Screen.SetResolution(720, 1280, true);
-        if (Instance != null)
+        if (Instance == null)
+            Instance = this;
+        else if (Instance != null)
         {
             Destroy(gameObject);
         }
-
-        Instance = this;
-        //gameObject.SetActive(true);
         DontDestroyOnLoad(gameObject);
     }
 
